@@ -1,0 +1,793 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"EditorialC",
+				"EditorialCreate\tabc"
+			],
+			[
+				"h",
+				"Http〔namespace〕"
+			],
+			[
+				"p",
+				"Produce〔class〕"
+			],
+			[
+				"ac",
+				"account_class\tabc"
+			],
+			[
+				"acc",
+				"account_class\t(AccountClassController.php)"
+			],
+			[
+				"date",
+				"dateBr\tabc"
+			],
+			[
+				"bad",
+				"badge"
+			],
+			[
+				"account_",
+				"account_class_id\t(AccountClassController.php)"
+			],
+			[
+				"Acc",
+				"AccountClass\tabc"
+			],
+			[
+				"catego",
+				"categorys\t(formulario.blade.php)"
+			],
+			[
+				"end",
+				"endif\t(formulario.blade.php)"
+			],
+			[
+				"conta",
+				"contains\t(Role.php)"
+			],
+			[
+				"has",
+				"hasFile\t(UserController.php)"
+			],
+			[
+				"null",
+				"nullable\tabc"
+			],
+			[
+				"belo",
+				"belongsToMany\t(Permission.php)"
+			],
+			[
+				"clas",
+				"colspan\tAttr"
+			],
+			[
+				"se",
+				"section\tTag"
+			],
+			[
+				"on",
+				"onDelete\tabc"
+			],
+			[
+				"fore",
+				"foreign\t(2020_02_08_234500_create_posts_table.php)"
+			],
+			[
+				"time",
+				"timestamps\tabc"
+			],
+			[
+				"st",
+				"status_id\tabc"
+			],
+			[
+				"for",
+				"foreign\tabc"
+			],
+			[
+				"def",
+				"default\tabc"
+			],
+			[
+				"boo",
+				"bootstrap/"
+			],
+			[
+				"spa",
+				"letter-spacing\tproperty"
+			],
+			[
+				"font-w",
+				"font-weight: 〔property〕"
+			],
+			[
+				"box-s",
+				"box-shadow\tproperty"
+			],
+			[
+				"pad",
+				"padding\tproperty"
+			],
+			[
+				"in",
+				"inline-block\tdisplay"
+			],
+			[
+				"border-col",
+				"border-color\tproperty"
+			],
+			[
+				"hei",
+				"height\tproperty"
+			],
+			[
+				"text",
+				"text-shadow\tproperty"
+			],
+			[
+				"br",
+				"branco\tabc"
+			],
+			[
+				"font",
+				"font-family\tproperty"
+			],
+			[
+				"bg-",
+				"bg-success \tBootstrap 3 Class"
+			],
+			[
+				"cen",
+				"center-block \tBootstrap 3 Class"
+			],
+			[
+				"b4form",
+				"b4:form:group\tgroup"
+			],
+			[
+				"col",
+				"color"
+			],
+			[
+				"bg",
+				"bg-info \tBootstrap 3 Class"
+			],
+			[
+				"erro",
+				"erro_contador"
+			],
+			[
+				"utf",
+				"utf-8"
+			],
+			[
+				"b4template",
+				"b4:template:starter\tstarter"
+			],
+			[
+				"b4templatecd",
+				"b4:template:cdn\tcdn"
+			],
+			[
+				"b4te",
+				"b4:template:navbars\tnavbars"
+			],
+			[
+				"b4na",
+				"b4:navbar\tnavbar"
+			],
+			[
+				"my",
+				"my_module_link\t(meumodulo.php)"
+			],
+			[
+				"hookDisplay",
+				"hookDisplayLeftCollum"
+			],
+			[
+				"Configura",
+				"Configuration"
+			],
+			[
+				"ar",
+				"arquivos"
+			],
+			[
+				"fe",
+				"fetchAll\t(Db.php)"
+			],
+			[
+				"ab",
+				"abstractFactory"
+			],
+			[
+				"padroes",
+				"padroes\\criacao\\Esteril\t(padrao01.php)"
+			],
+			[
+				"abstra",
+				"abstractFactory\t(AbstractFactoryCarro.php)"
+			],
+			[
+				"Roda",
+				"RodaLigaLeve"
+			],
+			[
+				"monta",
+				"montaRoda\t(AbstractFactoryCarro.php)"
+			],
+			[
+				"pd",
+				"padroes〔namespace〕"
+			],
+			[
+				"db",
+				"dbconfig"
+			],
+			[
+				"parse",
+				"parse_ini_file〔function〕"
+			],
+			[
+				"pa",
+				"password"
+			],
+			[
+				"co",
+				"connection"
+			],
+			[
+				"padroe",
+				"padroes"
+			],
+			[
+				"parse_",
+				"parse_ini_file〔function〕"
+			],
+			[
+				"da",
+				"dbname\t(IDataBaseConnection.php)"
+			],
+			[
+				"stat",
+				"static"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 357.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"git",
+				"Set Syntax: Git Config"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"icon",
+				"Snippet: SVG Icon Mail"
+			],
+			[
+				"intall",
+				"Package Control: Install Package"
+			],
+			[
+				"box",
+				"Boxy Theme: Activation"
+			],
+			[
+				"the",
+				"Boxy Theme: Activation"
+			],
+			[
+				"php sy",
+				"Set Syntax: PHP"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"php co",
+				"PHP Coding Standards Fixer: Fix this file (PHP Code Beautifier)"
+			],
+			[
+				"enable",
+				"SublimeLinter: Enable Debug Mode"
+			],
+			[
+				"php code",
+				"PHP Coding Standards Fixer: Fix this file (PHP Code Beautifier)"
+			],
+			[
+				"sni",
+				"SublimeLinter: Enable Linting"
+			],
+			[
+				"ph",
+				"PHP Code Sniffer: Turn Execute On Save Off"
+			],
+			[
+				"disable",
+				"SublimeLinter: Disable Linter"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"PHP Code Sniffer: ",
+				"PHP Code Sniffer: Turn Execute On Save Off"
+			],
+			[
+				"Snippet: ",
+				"Snippet: <?php else: ?>"
+			],
+			[
+				"bo",
+				"Boxy Theme: Activation"
+			]
+		],
+		"width": 467.0
+	},
+	"console":
+	{
+		"height": 419.0,
+		"history":
+		[
+			"ls",
+			"import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo"
+	],
+	"file_history":
+	[
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/resources/views/admin/editorial/create.blade.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/resources/views/admin/editorial/show.blade.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/resources/views/admin/editorial/edit.blade.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/resources/views/admin/editorial/index.blade.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/resources/views/admin/editorial/formulario.blade.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/routes/.Admin/Editorial/routeeditorial.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/resources/views/admin/category/index.blade.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/app/Http/Requests/Editorial/EditorialCreate.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/resources/views/admin/produce/index.blade.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/app/Http/Controllers/Admin/CategoryController.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/resources/views/admin/produce/formulario.blade.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/resources/views/admin/produce/edit.blade.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/resources/views/admin/produce/create.blade.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/routes/.Admin/Produce/routeproduce.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/resources/views/admin/produce/show.blade.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/app/Http/Controllers/Admin/ProduceController.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/app/Http/Requests/Produce/ProduceCreate.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/app/Http/Controllers/Admin/PermissionController.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/app/Http/Controllers/Admin/RoleController.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/app/Models/Admin/Produce.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/app/Models/Admin/Editorial.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/resources/views/admin/sections/account.blade.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/app/Http/Controllers/Admin/EditorialController.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/database/migrations/2020_03_01_230912_create_produces_table.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/app/Http/Controllers/Admin/AccountClassController.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/app/Http/Requests/Account/AccountClassRequest.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/app/Models/Admin/AccountClass.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/resources/views/admin/account_class/show.blade.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/resources/views/admin/account_class/index.blade.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/resources/views/admin/account_class/formulario.blade.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/resources/views/admin/account/formulario.blade.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/resources/views/admin/account/create.blade.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/app/Models/Admin/Account.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/resources/views/admin/account/index.blade.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/resources/views/admin/post/show.blade.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/app/Models/Admin/Permission.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/app/Models/Admin/Role.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/app/Http/Controllers/Admin/AccountController.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/resources/views/admin/account_class/edit.blade.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/resources/views/admin/account_class/create.blade.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/routes/.Admin/AccountClass/routeaccount_class.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/resources/views/admin/permission/edit.blade.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/resources/views/admin/account/show.blade.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/resources/views/admin/account/edit.blade.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/routes/.Admin/Account/routeaccount.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/resources/views/admin/user/formulario.blade.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/app/Providers/AppServiceProvider.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/app/Http/Requests/Account/AccountCreate.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/app/Http/Controllers/Admin/PostController.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/database/migrations/2020_03_09_151409_create_roles_table.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/app/User.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/resources/views/layouts/app.blade.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/resources/views/admin/sections/post.blade.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/resources/views/admin/sections/usuario.blade.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/app/Http/Controllers/HomeController.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/routes/web.php",
+		"/home/adamo/Documentos/desenvolvimento/acl/app/User.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/app/Http/Controllers/Admin/UserController.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/app/Http/Requests/Role/RoleCreate.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/resources/views/admin/user/create.blade.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/resources/views/admin/post/edit.blade.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/resources/views/admin/category/edit.blade.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/resources/views/admin/category/create.blade.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/resources/views/admin/category/formulario.blade.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/resources/views/admin/post/create.blade.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/resources/views/admin/post/index.blade.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/resources/views/admin/post/formulario.blade.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/resources/views/admin/role/edit.blade.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/resources/views/admin/role/formulario.blade.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/resources/views/admin/user/edit.blade.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/.docker/apache/000-default.conf",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/resources/views/admin/user/index.blade.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/resources/views/admin/user/show.blade.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/database/migrations/2020_02_08_234500_create_posts_table.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/database/migrations/2014_10_12_000000_create_users_table.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/resources/views/admin/category/show.blade.php",
+		"/home/adamo/curso_laravel/Code/task/resources/views/clientes/consulta.blade.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/database/migrations/2020_02_08_234501_create_categories_table.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/resources/views/admin/status/show.blade.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/app/Http/Controllers/Admin/ModuloController.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/app/Models/Admin/Post.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/app/Http/Requests/Post/PostCreate.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/app/Models/Admin/Status.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/app/Http/Controllers/Admin/StatusController.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/routes/.Admin/Status/routestatus.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/resources/views/admin/status/index.blade.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/resources/views/admin/status/formulario.blade.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/resources/views/admin/status/edit.blade.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/resources/views/admin/status/create.blade.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/resources/views/admin/modulo/show.blade.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/resources/views/admin/modulo/edit.blade.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/resources/views/admin/modulo/create.blade.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/resources/views/admin/modulo/formulario.blade.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/routes/.Admin/Category/routecategory.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/app/Models/Admin/Category.php",
+		"/home/adamo/Documentos/desenvolvimento/acl/app/Http/Controllers/Admin/PermissionController.php",
+		"/home/adamo/.config/sublime-text-3/Packages/DocBlockr/Base File.sublime-settings",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/public/css/adamo.css",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/routes/.Admin/web.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/.env",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/resources/views/auth/login.blade.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/resources/views/auth/register.blade.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/database/migrations/2020_03_24_190942_add_modulo_id_table_permissions.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/database/migrations/2020_03_09_151448_create_permissions_table.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/database/migrations/2020_02_24_190942_add_modulo_id_table_permissions.php",
+		"/home/adamo/Documentos/desenvolvimento/acl/database/migrations/2020_02_24_190942_add_modulo_id_table_permissions.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/database/migrations/2020_02_09_151408_create_modulos_table.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/database/migrations/2020_02_09_151409_create_roles_table.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/database/migrations/2020_02_09_151448_create_permissions_table.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/database/migrations/2020_03_01_232721_create_accounts_table.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/database/migrations/2020_03_01_232712_create_account_classes_table.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/database/migrations/2020_03_01_230858_create_editorials_table.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/database/migrations/2020_02_08_234502_create_comments_table.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/database/migrations/2020_02_08_234491_create_statuses_table.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/database/migrations/2020_03_01_225812_comments.php",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/webpack.mix.js",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/resources/assets/js/app.js",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/resources/assets/js/bootstrap.js",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/package.json",
+		"/home/adamo/Documentos/desenvolvimento/acl/webpack.mix.js",
+		"/home/adamo/Documentos/desenvolvimento/acl/resources/assets/js/app.js",
+		"/home/adamo/Documentos/desenvolvimento/acl/resources/assets/js/bootstrap.js",
+		"/home/adamo/Documentos/desenvolvimento/acl/public/js/app.js",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/docker-compose.yml",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/resources/assets/sass/app.scss",
+		"/home/adamo/Documentos/desenvolvimento/acl/resources/assets/sass/app.scss",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/.gitignore",
+		"/home/adamo/Documentos/desenvolvimento/plataforma_conteudo/code/composer.lock"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 130.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"category",
+			"Category",
+			"category",
+			"Categoria",
+			"category",
+			"Categoria",
+			"Category",
+			"category",
+			"Categoria",
+			"category",
+			"Category",
+			"@if",
+			"editorial",
+			"account",
+			"Account",
+			"$produce->user",
+			"ver Produtoras",
+			"account",
+			"name",
+			"account",
+			"accounts",
+			"account",
+			"email",
+			"Usuário",
+			"usuário",
+			"User",
+			"user",
+			"/admin/account_classes",
+			"$account_classes->",
+			"Account",
+			"account",
+			"category",
+			"form-control",
+			"category",
+			"name",
+			"category",
+			"categorys",
+			"category",
+			"_classe",
+			"classe",
+			"account_classe.",
+			"account_classe'",
+			"account_classe ",
+			"category",
+			"Category",
+			"form-control",
+			"acoount",
+			"AccountClass::all();",
+			"();\n",
+			"();",
+			"AccountClass::all()",
+			"account_class",
+			"Category",
+			"category",
+			"categorys",
+			"category",
+			"name",
+			"category",
+			"Account",
+			"$category",
+			"admin.category",
+			"account_class_id",
+			"status_id",
+			"title",
+			"post",
+			"posts",
+			"admin.post",
+			"admin.post.index",
+			"Post",
+			";\n",
+			"status",
+			"'\n",
+			">\n",
+			"label",
+			"category",
+			"ativo",
+			"active",
+			"ativo",
+			"image",
+			"post",
+			"Category",
+			";\n",
+			"category",
+			"Categoria",
+			"category",
+			"statuss",
+			"category",
+			"Category",
+			"category",
+			"Statuss",
+			"Categoria",
+			"statuss",
+			"category",
+			"Category",
+			"category",
+			"Category",
+			"statuss",
+			"category",
+			"modulo",
+			"Role",
+			"role",
+			"Role",
+			"role",
+			"Role",
+			"role",
+			"Role",
+			"role",
+			"Visualizar",
+			"Post",
+			"post",
+			"Post",
+			"post",
+			"Post",
+			"post",
+			"method='category'",
+			"post",
+			"nome",
+			"post",
+			"Post",
+			"post",
+			"modulo",
+			"public function index()\n    {}",
+			"fam",
+			"Visualizar",
+			"');\n",
+			"post_category",
+			"role_user",
+			"permission_role"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			");\n",
+			"Status",
+			"status",
+			"statuses",
+			"status",
+			"Status",
+			"status",
+			"Statuses",
+			"Status",
+			"statuses",
+			"status"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 43.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.SublimeLinter":
+	{
+		"height": 0.0
+	},
+	"output.SublimeLinter Messages":
+	{
+		"height": 136.0
+	},
+	"output.exec":
+	{
+		"height": 243.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "markcontent.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/.config/sublime-text-3/Packages/User/Package Control.sublime-workspace"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 305.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

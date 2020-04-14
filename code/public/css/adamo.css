@@ -1,0 +1,56 @@
+.background-admin {
+    background: url('../storage/admin/kitchen-731351_1920.jpg')
+}
+
+.menu-icon {
+    font-size: 3.0rem
+}
+
+.title-panel {
+    font-size: 2.0rem;
+    margin-right: 15px;
+}
+
+.label {
+    margin-right: 5px;
+}
+
+.navbar {
+    margin-bottom: 0;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    float: none;
+}
+
+.nav-top>li>a {
+    padding-top: 3px !important;
+    padding-bottom: 3px !important;
+    color: #fff !important;
+}
+
+.navbar-brand {
+    font-family: 'Barriecito', cursive;
+    font-size: 1.8rem;
+    text-shadow: 2px 2px 5px #000
+}
+
+.card a {
+    color: #fff !important;
+}
+
+.image {
+    height: 200px;
+    width: 200px;
+    overflow: hidden;
+}
+
+.image .fas {
+    font-size: 2.5rem
+}
+
+.form-legend {
+    top: -25px;
+}
