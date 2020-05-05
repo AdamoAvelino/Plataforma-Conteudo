@@ -13,11 +13,11 @@ class UserController extends Controller
     /**
      * Lista todos os usuários cadastrados
      *
-     * @return metodo view para apresentação do template de index de usuários
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function index()
     {
-        $users = User::all();
+        $users = User::getAll();
         return view('admin.user.index', compact('users'));
     }
 
@@ -33,6 +33,7 @@ class UserController extends Controller
         $user = User::find($id);
         return view('admin.user.show', compact('user'));
     }
+
     /**
      * ------------------------------------------------------------------------
      * Lança uma registro do usuário para o formulario de edição
@@ -121,6 +122,7 @@ class UserController extends Controller
         }
         return redirect()->route('admin.user.edit', compact('user'));
     }
+
     /**
      * ---------------------------------------------------------------------------
      * Busca o registro de um usuário e deleta da base de dados

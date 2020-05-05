@@ -14,14 +14,14 @@ class AccountController extends Controller
 {
     /**
      * ---------------------------------------------------------------------------
-     * Constroi uma lista todos os account
+     * Constrói uma lista com todos os account
      *
-     * @return metodo view com template index de account
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function index()
     {
     	$accounts = Account::all();
-    	return view('admin.account.index', compact('accounts'));
+        return view('admin.account.index', compact('accounts'));
     }
 
     /**
@@ -29,7 +29,7 @@ class AccountController extends Controller
      * Cria a tela para mostrar os detalhes de uma account individual
      *
      * @param [int] $id - identificador do account a ser apresentado
-     * @return metodo view com template show de account
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function show($id)
     {
@@ -40,7 +40,7 @@ class AccountController extends Controller
      * ---------------------------------------------------------------------------
      * Apresenta um formulário com os dados de um account que podem ser alterados.
      * @param [int] $id - identificador do account a ser editado
-     * @return metodo view com template edit de account
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function edit($id)
     {
@@ -52,7 +52,7 @@ class AccountController extends Controller
     /**
      * ---------------------------------------------------------------------------
      * Apresenta um formulário com entradas para criar um account
-     * @return metodo view com template create de account com injeção
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      * da collection de AccountClass
      */
     public function create()
@@ -65,7 +65,7 @@ class AccountController extends Controller
      * Recolhe os dados da requisição trata e os persiste na base de dados
      * caso tenha sucesso.
      * @param AccountCreate $request - Objeto request que sanatiza os dados de entrada
-     * @return metodo de redirecionamento caso criado com sucesso | metodo view com
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      * injeção dos dodos de requisição caso tenha dado algum erro.
      */
     public function save(AccountCreate $request)

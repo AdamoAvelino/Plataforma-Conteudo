@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Policies\PostPolicy;
 use Illuminate\Http\Request;
 use App\Http\Requests\Post\PostCreate;
 use App\Http\Controllers\Controller;
@@ -19,6 +20,11 @@ class PostController extends Controller
      */
     public function index()
     {
+//        $user = auth()->user();
+//        $roles = $user->roles;
+//        if ($roles->contains('Cordenador')) {
+//
+//        }
         $posts = Post::all();
         return view('admin.post.index', compact('posts'));
     }
@@ -35,6 +41,7 @@ class PostController extends Controller
         $post = Post::find($id);
         return view('admin.post.show', compact('post'));
     }
+
     /**
      * ---------------------------------------------------------------------------
      * Apresenta um formulário com os dados de um post que podem ser alterados.
@@ -62,6 +69,7 @@ class PostController extends Controller
         $categorys = Category::all();
         return view('admin.post.create', compact('statuses', 'categorys'));
     }
+
     /**
      * ---------------------------------------------------------------------------
      * Recolhe os dados da requisição trata e persiste os persiste na base de dados
@@ -74,7 +82,10 @@ class PostController extends Controller
     {
         $dataForm = $request->except('_token');
         $dataForm['user_id'] = auth()->user()->id;
-        $dataForm['image'] = $request->image->store('public');
+        if ($request->hasFile('image')) {
+            $dataForm['image'] = $request->image->store('public');
+        }
+
         $post = Post::create($dataForm);
         if ($post->id) {
             $post->categorys()->sync($request->categorys);
@@ -86,6 +97,7 @@ class PostController extends Controller
             return view('admin.post.create', compact('post'));
         }
     }
+
     /**
      * ---------------------------------------------------------------------------
      * Recolhe os dados da requisição trata e os persiste na base de dados
@@ -116,6 +128,7 @@ class PostController extends Controller
 
         return redirect()->route('admin.post.edit', $post->id);
     }
+
     /**
      * ---------------------------------------------------------------------------
      * Busca o registro de um post e deleta da base de dados

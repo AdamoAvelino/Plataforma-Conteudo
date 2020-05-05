@@ -75,7 +75,7 @@ class HomeController extends Controller
             echo "</ul>";
         }
         echo "<hr>";
-        var_dump(Gate::allows('view_post'));
+        var_dump(Gate::allows('post_view'));
     }
 
     public function sections($name)
@@ -87,7 +87,7 @@ class HomeController extends Controller
     private function usuario()
     {
         $roles  = Role::count();
-        $users  = User::count();
+        $users  = count(User::getAll());
         $permissions = Permission::count();
         $modulos = Modulo::count();
         return view("admin.sections.usuario"
