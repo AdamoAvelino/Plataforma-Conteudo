@@ -111,7 +111,7 @@ class User extends Authenticatable
      * Metodo que retorna uma coleção de objetos usuário de acordo com a permissão do usuário autenticado
      * @return User[]|\Illuminate\Database\Eloquent\Collection
      */
-    public static function getAll()
+    public static function all($array = [])
     {
         $autenticado = auth()->user();
         $produtora = [];

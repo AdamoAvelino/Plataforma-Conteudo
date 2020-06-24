@@ -18,7 +18,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::getAll();
+        $users = User::all();
         if ($users->count($users) == 1) {
             return $this->show($users[0]->id);
         }

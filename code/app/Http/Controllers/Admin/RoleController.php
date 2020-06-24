@@ -24,7 +24,7 @@ class RoleController extends Controller
      */
     public function index()
     {
-        $roles = $this->role->all();
+        $roles = Role::all();
         return view('admin.role.index', compact('roles'));
     }
 
@@ -98,7 +98,7 @@ class RoleController extends Controller
      * @param [int] $id identificador de um registro role
      * @return metodo redirect para a rota admin.role.edit
      */
-    public function update(RoleCreate $request,  $id)
+    public function update(RoleCreate $request, $id)
     {
         $role = $this->role->find($id);
         $role->name = $request->name;

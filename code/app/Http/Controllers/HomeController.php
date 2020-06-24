@@ -80,18 +80,18 @@ class HomeController extends Controller
 
     public function sections($name)
     {
-
         return $this->$name();
     }
 
     private function usuario()
     {
-        $roles  = Role::count();
-        $users  = count(User::getAll());
+        $roles  = Role::all()->count();
+        $users  = User::all()->count();
         $permissions = Permission::count();
         $modulos = Modulo::count();
-        return view("admin.sections.usuario"
-            , compact('roles', 'users', 'permissions', 'modulos')
+        return view(
+            "admin.sections.usuario",
+            compact('roles', 'users', 'permissions', 'modulos')
         );
     }
 
@@ -100,8 +100,9 @@ class HomeController extends Controller
         $posts  = Post::count();
         $categorys  = Category::count();
         $statuses  = Status::count();
-        return view("admin.sections.post"
-            , compact('posts', 'categorys', 'statuses')
+        return view(
+            "admin.sections.post",
+            compact('posts', 'categorys', 'statuses')
         );
     }
 
@@ -111,8 +112,9 @@ class HomeController extends Controller
         $account_classes  = AccountClass::count();
         $produces  = Produce::count();
         $editorials  = Editorial::count();
-        return view("admin.sections.account"
-            , compact('accounts', 'account_classes', 'produces', 'editorials')
+        return view(
+            "admin.sections.account",
+            compact('accounts', 'account_classes', 'produces', 'editorials')
         );
     }
 }
