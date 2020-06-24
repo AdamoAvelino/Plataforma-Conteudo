@@ -19,6 +19,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/show-post/{id}', 'HomeController@showPost')->name('home.show-post');
 Route::get('/permission-debug', 'HomeController@permissionDebug');
 
+Route::get('/teste-query', 'TesteQueryUser@testeQuery');
+
 
 
 Auth::routes();

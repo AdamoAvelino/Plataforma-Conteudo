@@ -7,7 +7,7 @@
                 <div class="col-md-3">
                     <div class="card bg-primary text-white">
                         <div class='card-header text-right'>
-                            <a href='{{url('/admin/user')}}' class='label label-primary'>Ver Users
+                            <a href='{{url('/admin/user')}}' class='label label-primary section'>Ver Users
                                 <span class='badge badge-light'> {{$users}} </span>
                             </a>
                         </div>
@@ -26,7 +26,7 @@
             <div class="col-md-3">
                 <div class="card bg-warning text-white">
                     <div class="card-header text-right">
-                        <a href="{{ url('/admin/role') }}" class='label label-warning'
+                        <a href="{{ url('/admin/role') }}" class='label label-warning section'
                            style='display: inline-block'>
                             Ver Perfis
                             <span class='badge badge-light'>{{$roles}}</span>
@@ -45,7 +45,7 @@
             <div class="col-md-3">
                 <div class="card bg-success text-white">
                     <div class="card-header text-right">
-                        <a href="{{ url('/admin/permission') }}" class='label label-success'
+                        <a href="{{ url('/admin/permission') }}" class='label label-success section'
                            style='display: inline-block'>
                             Ver Permissões
                             <span class='badge badge-light'>{{$permissions}}</span>
@@ -64,7 +64,7 @@
             <div class="col-md-3">
                 <div class="card bg-danger text-white">
                     <div class="card-header text-right">
-                        <a href='{{ url("/admin/modulo") }}' class='label label-danger'
+                        <a href='{{ url("/admin/modulo") }}' class='label label-danger section'
                            style='display: inline-block'>
                             Ver Modulos
                             <span class='badge badge-light'> {{$modulos}} </span>

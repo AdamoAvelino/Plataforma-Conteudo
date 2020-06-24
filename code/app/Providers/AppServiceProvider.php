@@ -36,7 +36,6 @@ class AppServiceProvider extends ServiceProvider
         Blade::directive('statusActive', function ($active) {
             return "<?php echo $active ? 'Ativo' : 'Inativo';  ?>";
         });
-
     }
 
     /**

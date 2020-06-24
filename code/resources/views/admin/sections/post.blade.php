@@ -6,7 +6,7 @@
         <div class="col-md-3">
             <div class="card bg-danger text-white">
                 <div class="card-header text-right">
-                    <a href='{{ url("/admin/post") }}' class='label label-danger' style='display: inline-block'>
+                    <a href='{{ url("/admin/post") }}' class='label label-danger section' style='display: inline-block'>
                         Ver Post
                         <span class='badge badge-light'> {{$posts}} </span>
                     </a>
@@ -25,7 +25,7 @@
         <div class="col-md-3">
             <div class="card bg-warning text-white">
                 <div class="card-header text-right">
-                    <a href='{{ url("/admin/category") }}' class='label label-danger' style='display: inline-block'>
+                    <a href='{{ url("/admin/category") }}' class='label label-danger section' style='display: inline-block'>
                         Ver Categoria
                         <span class='badge badge-light'> {{$categorys}} </span>
                     </a>
@@ -43,7 +43,7 @@
         <div class="col-md-3">
             <div class="card bg-success text-white">
                 <div class="card-header text-right">
-                    <a href='{{ url("/admin/status") }}' style='display: inline-block'>
+                    <a class="section" href='{{ url("/admin/status") }}' style='display: inline-block'>
                         Ver Status
                         <span class='badge badge-light'> {{$statuses}} </span>
                     </a>

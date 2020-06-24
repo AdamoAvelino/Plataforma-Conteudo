@@ -37,7 +37,7 @@
     text-shadow: 2px 2px 5px #000
 }
 
-.card a {
+.card a.section {
     color: #fff !important;
 }
 

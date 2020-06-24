@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Support\Facades\DB;
 use App\Models\Admin\Role;
 use App\Models\Admin\Produce;
 
@@ -12,16 +13,17 @@ class User extends Authenticatable
     use Notifiable;
 
     /**
-     * The attributes that are mass assignable.
-     *
+     * -------------------------------------------------------------------------------------------------------
+     * POssivei atributos para pesistencia na base de dados
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'photo', 'active'
+        'name', 'email', 'password', 'photo', 'active', 'cpf', 'telefone', 'cnpj'
     ];
 
     /**
-     * The attributes that should be hidden for arrays.
+     * -------------------------------------------------------------------------------------------------------
+     * Atributos ocultos do formulario.
      *
      * @var array
      */
@@ -30,19 +32,32 @@ class User extends Authenticatable
     ];
 
     /**
-     * [roles description]
-     * @return [type] [description]
+     * -------------------------------------------------------------------------------------------------------
+     * Metodos de relacionamento da entidade Role
+     * @return Role
      */
     public function roles()
     {
         return $this->belongsToMany(Role::class);
     }
 
+    /**
+     * -------------------------------------------------------------------------------------------------------
+     * Metodo de relacionamento da entidade Produce
+     * @return Produce
+     */
     public function produces()
     {
         return $this->belongsToMany(Produce::class, 'user_produce');
     }
 
+    /**
+     * -------------------------------------------------------------------------------------------------------
+     * @param Collection $role objeto Collection de Role
+     * @param String $permission_name nome da permission para verificar a possivel
+     * existêmncia em alguma role da collection
+     * @return boolean
+     */
     public function hasPermission($roles, $permission_name)
     {
         $retorno = false;
@@ -56,8 +71,10 @@ class User extends Authenticatable
     }
 
     /**
-     * @param $produces
-     * @return bool
+     * -------------------------------------------------------------------------------------------------------
+     * Verificar se o objeto usuário pertence à alguma produce da Collection injetada
+     * @param Collection $produces coleção de produce
+     * @return boolean
      */
     public function hasProduces($produces)
     {
@@ -72,9 +89,10 @@ class User extends Authenticatable
     }
 
     /**
-     * [hasManyRules description]
-     * @param  [type]  $roles [description]
-     * @return boolean        [description]
+     * -------------------------------------------------------------------------------------------------------
+     * Verificar se objeto do usuário tem alguma role na Collecton injetada
+     * @param  Collection  $roles Coleção de Role
+     * @return boolean
      */
     public function hasManyRules($roles)
     {
@@ -89,35 +107,70 @@ class User extends Authenticatable
     }
 
     /**
+     * -------------------------------------------------------------------------------------------------------
+     * Metodo que retorna uma coleção de objetos usuário de acordo com a permissão do usuário autenticado
      * @return User[]|\Illuminate\Database\Eloquent\Collection
      */
     public static function getAll()
     {
         $autenticado = auth()->user();
+        $produtora = [];
+
+        // Seta a produrora do usuário logado
+        $autenticado->produces->map(function ($produtoras) use (&$produtora) {
+            $produtora[] = $produtoras->id;
+        });
+
+        $users = self::getQuerySelect();
+
+        // Coordenador pode listar usuarios editores e/ou revesores da própria produtora.
         if ($autenticado->hasManyRules('Coordenador')) {
-            $users = User::join('role_user', 'role_user.user_id', '=', 'users.id')
-                ->join('roles', 'roles.id', '=', 'role_user.role_id')
-                ->select('users.id', 'users.name', 'users.email', 'users.created_at')
-                ->whereIn('roles.id', [2, 3])
-                ->groupBy('users.id')->get();
+            $users = $users->whereIn('roles.id', [1, 2, 3])
+            ->whereIn('user_produce.produce_id', $produtora)
+            ->groupBy('users.id')->get();
 
             return $users;
-        } else if ($autenticado->hasManyRules('Admin')) {
+            
+        // Admin pode listar todos os usuários de sua produtora
+        } elseif ($autenticado->hasManyRules('Admin')) {
+            $users = $users->whereIn('user_produce.produce_id', $produtora)->groupBy('users.id')->get();
+            return $users;
 
-            $produtora = [];
-            $autenticado->produces->map(function ($produtoras) use (&$produtora) {
-                $produtora[] = $produtoras->id;
-            });
+        // Revisores e Editodores só podem ver seu perfil
+        } elseif ($autenticado->hasManyRules('Revisor') or $autenticado->hasManyRules('Editor')) {
+            $users = $users->where('users.id', $autenticado->id)
+            ->groupBy('users.id')
+            ->get();
 
-            $user = User::join('user_produce', 'users.id', '=', 'user_produce.user_id')
-                ->whereIn('user_produce.produce_id', $produtora)
-                ->select('users.id', 'users.name', 'users.email', 'users.created_at')
-                ->groupBy('users.id')->get();
-
-            return $user;
+            return $users;
         }
 
-        $users = self::all();
+        // Usuário root pode ver todos os usuários
+        $users = $users->groupBy('users.id')->get();
+        return $users;
+    }
+
+    /**
+     * -------------------------------------------------------------------------------------------------------
+     * Query Principla para listagem de usuarios em relatórios.
+     * @return User|QueryBuilder
+     */
+    private static function getQuerySelect()
+    {
+        $users = User::join('role_user', 'role_user.user_id', '=', 'users.id')
+        ->join('roles', 'roles.id', '=', 'role_user.role_id')
+        ->leftJoin('user_produce', 'user_produce.user_id', '=', 'users.id')
+        ->leftJoin('produces', 'produces.id', '=', 'user_produce.produce_id')
+        ->select(
+            'users.id',
+            'users.name',
+            'users.email',
+            'users.created_at',
+            'users.active',
+            DB::raw('GROUP_CONCAT(roles.name) roles'),
+            DB::raw('GROUP_CONCAT(DISTINCT produces.name) as produce')
+        );
+
         return $users;
     }
 }

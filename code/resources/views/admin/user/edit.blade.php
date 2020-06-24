@@ -1,6 +1,6 @@
 @extends('layouts.app')
-@can('update', $user)
 @section('content')
+@can('update', $user)
     <div class="container">
         <form action="{{ route('admin.user.delete', $user->id) }}" id="delete" method='post'>
             {{ csrf_field() }}
@@ -16,7 +16,7 @@
                 {{ method_field('PUT') }}
                 @include('admin.user.formulario')
                 <div class="row" style='margin-top: 10px'>
-                    <div class="col-md-8">
+                    <div class="col-md-8 offset-4">
                         <button class='btn bt-sm btn-success'>
                             <i class="fas fa-save"></i>
                         </button>
@@ -30,5 +30,5 @@
             </fieldset>
         </form>
     </div>
-@endsection
 @endcan
+@endsection

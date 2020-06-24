@@ -25,6 +25,11 @@ class UserPolicy
         return $user->hasPermission($user->roles, 'user_view') and $this->getRule($user, $model);
     }
 
+    public function updateActive(User $user, User $model)
+    {
+        return $user->id == $model->id;
+    }
+
     /**
      * Determine whether the user can create models.
      *
@@ -36,7 +41,7 @@ class UserPolicy
         return $user->hasPermission($user->roles, 'user_create');
     }
 
-    public function includeProduces(User $user, User $model)
+    public function includeProduces(User $user)
     {
         return $user->hasManyRules('Admin') or $user->hasManyRules('Coordenador');
     }
@@ -85,12 +90,13 @@ class UserPolicy
     private function getRule(User $user, User $model)
     {
         $retorno = false;
-        if ($user->hasManyRules('Admin') or $user->hasManyRules('Coordenador')) {
-            $retorno = $user->hasProduces($model->produces);
-        }
 
         if ($user->hasManyRules('Revisor') or $user->hasManyRules('Editor')) {
             $retorno = $user->id == $model->id;
+        }
+
+        if ($user->hasManyRules('Admin') or $user->hasManyRules('Coordenador')) {
+            $retorno = $user->hasProduces($model->produces);
         }
 
         return $retorno;

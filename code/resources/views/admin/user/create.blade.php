@@ -11,7 +11,7 @@
 
                 @include('admin.user.formulario')
                 <div class="row">
-                    <div class="col-md-8">
+                    <div class="col-md-8 offset-4">
                         <label for="">Senha</label>
                         <input type="password" name="password" class="form-control form-control-sm">
                         <label for="">Confirme a Senha</label>
@@ -19,7 +19,7 @@
                     </div>
                 </div>
                 <div class="row" style='margin-top: 10px'>
-                    <div class="col-md-8">
+                    <div class="col-md-8 offset-4">
                         <button class='btn bt-sm btn-success'>
                             <i class="fas fa-save"></i>
                         </button>
