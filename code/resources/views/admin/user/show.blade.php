@@ -1,12 +1,13 @@
 @extends('layouts.app')
 @section('content')
-@can('anyView', $user)
+@can('view', $user)
 <article class="container mt-4">
     <fieldset class='position-relative shadow mt-5 py-2 px-4 border border-warning rounded'>
         <legend class='form-legend d-inline position-absolute' style='width:60%'>
             <span class='p-2 bg-warning text-white shadow rounded'>{{ $user->name }}</span>
         </legend>
         <div class="row">
+            @include('layouts.message')
             <section class="col-md-4">
                 <div class="card mt-5 mb-3">
                     <div class="card-header d-flex justify-content-center bg-white">
@@ -27,7 +28,7 @@
                             </li>
                             @if($user->telephone)
                             <li class="list-group-item">
-                                <strong>Telefone</strong>
+                                <strong>Telefone:</strong> {{$user->telephone}}
                             </li>
                             @endif
                             @if($user->cpf)
@@ -53,19 +54,21 @@
                 <a class='btn btn-primary btn-sm' href="{{route('admin.user.edit', $user->id)}}">
                     Alterar <i class="fas fa-edit"></i>
                 </a>
+                @can('create', App\User::class)
                 <a class='btn btn-success btn-sm' href="{{route('admin.user.create')}}">
                     Incluir <i class="fas fa-plus-square"></i>
                 </a>
+                @endcan
             </p>
             <h3>
                 <span class="badge @classActive($user->active)">
                     @statusActive($user->active)
                 </span>
+                <span style='font-size: 0.6em'>
+                    <strong>Criado:</strong> @dateBr($user->creates_at) - 
+                    <strong>Atualizado:</strong> @dateBr($user->updated_at)
+                </span>
             </h3>
-            <h3 class='border-top'>Registro</h3>
-            <span class='badge badge-primary' style="font-size: 1rem">Criado: @dateBr($user->creates_at) @hora($user->created_at)</span>
-            <span class='badge badge-primary' style="font-size: 1rem">Atualizado: @dateBr($user->updated_at) @hora($user->updated_at)</span>
-
             <h3 class='border-top mt-2'>Perfís</h3>
             @forelse($user->roles as $role)
             <span class='badge badge-info' style="font-size: 1rem">{{$role->name}}</span>

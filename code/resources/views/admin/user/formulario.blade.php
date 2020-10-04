@@ -9,11 +9,13 @@
             <a class='btn btn-info btn-sm mt-0' href="{{route('admin.user.index')}}">
                 Listar <i class="fas fa-list"></i>
             </a>
+            
             @isset($user->id)
             <a class='btn btn-success btn-sm mt-0' href="{{route('admin.user.create')}}">
                 Criar <i class="fas fa-plus-square"></i>
             </a>
             @endisset
+            
         </p>
     </article>
 

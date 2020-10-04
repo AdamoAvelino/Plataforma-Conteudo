@@ -4446,7 +4446,7 @@ input[type="button"].btn-block {
 .custom-control {
   position: relative;
   display: block;
-  min-height: 1.5rem;
+  min-height: 2rem;
   padding-left: 1.5rem;
 }
 

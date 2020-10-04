@@ -8,6 +8,8 @@ use App\User;
 use App\Policies\UserPolicy;
 use App\Models\Admin\Post;
 use App\Policies\PostPolicy;
+use App\Models\Admin\Role;
+use App\Policies\RolePolicy;
 
 class AuthServiceProvider extends ServiceProvider
 {
@@ -20,6 +22,7 @@ class AuthServiceProvider extends ServiceProvider
 //        'App\Model' => 'App\Policies\ModelPolicy',
         Post::class => PostPolicy::class,
         User::class => UserPolicy::class,
+        Role::class => RolePolicy::class,
     ];
 
     /**
@@ -44,7 +47,5 @@ class AuthServiceProvider extends ServiceProvider
 //            }
 //
 //        });
-
-
     }
 }

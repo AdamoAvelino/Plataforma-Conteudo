@@ -22,7 +22,7 @@ class UserController extends Controller
         if ($users->count($users) == 1) {
             return $this->show($users[0]->id);
         }
-         
+        
         return view('admin.user.index', compact('users'));
     }
 
@@ -35,7 +35,11 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        $user = User::find($id);
+        $user = User::getUser($id);
+        if (!$user) {
+            session()->flash('error', 'Nenhum Usuário Encontrado');
+            return redirect()->route('admin.user.index');
+        }
         return view('admin.user.show', compact('user'));
     }
 
@@ -48,7 +52,11 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        $user = User::find($id);
+        $user = User::getUser($id);
+        if (!$user) {
+            session()->flash('error', 'Usuário Não Encontrado');
+            return redirect()->route('admin.user.index');
+        }
         $roles = Role::all();
         $produces = false;
         if (auth()->user()->hasManyRules('Root')) {
@@ -67,15 +75,19 @@ class UserController extends Controller
      */
     public function create()
     {
-        $roles = Role::all();
-
-        $produces = false;
-        if (auth()->user()->hasManyRules('Root')) {
-            $produces = Produce::all();
-        } elseif (auth()->user()->hasManyRules('Revisor') or auth()->user()->hasManyRules('Coordenador')) {
-            $produces = auth()->user()->produces;
+        if (! auth()->user()->can('create', auth()->user())) {
+            session()->flash('error', 'Ação Não Permitida');
+            return redirect()->route('admin.user.index');
         }
 
+        $roles = Role::all();
+        $produces = false;
+        
+        if (auth()->user()->hasManyRules('Root')) {
+            $produces = Produce::all();
+        } elseif (auth()->user()->hasManyRules('Coordenador') or auth()->user()->hasManyRules('Admin')) {
+            $produces = auth()->user()->produces;
+        }
         return view('admin.user.create', compact('roles', 'produces'));
     }
 
@@ -126,14 +138,22 @@ class UserController extends Controller
      */
     public function update(UserCreate $request, $id)
     {
-        // dd($request);
-        $user = User::find($id);
+        $user = User::getUser($id);
+        
+        if (!$user) {
+            session()->flash('error', 'Usuário Não Encontrado');
+            return redirect()->route('admin.user.index');
+        }
+
         if ($request->hasFile('photo')) {
             $user->photo = $request->photo->store('public');
         }
-        $user->active = isset($request->active) ? $request->active : 0;
+        
+        if (auth()->user()->can('updateActive', $user)) {
+            $user->active = isset($request->active) ? $request->active : 0;
+        }
+
         $user->name = $request->name;
-        // $user->password = bcrypt($request->password);
         $user->email = $request->email;
         $user->cpf = $request->cpf;
         $user->cnpj = $request->cnpj;
@@ -143,7 +163,9 @@ class UserController extends Controller
                 $user->roles()->sync($request->perfis);
             }
 
-            $user->produces()->sync($request->produces);
+            if (isset($request->produces)) {
+                $user->produces()->sync($request->produces);
+            }
 
             $request->session()->flash('success', "Usuário {$user->name} Atualizado com Sucesso");
         } else {
@@ -160,7 +182,11 @@ class UserController extends Controller
      */
     public function delete($id)
     {
-        $user = User::find($id);
+        $user = User::getUser($id);
+        if (! $user) {
+            session()->flash('error', 'Usuário Não Encontrado');
+            return redirect()->route('admin.user.index');
+        }
         if ($user->delete()) {
             session()->flash('success', "Usuário {$user->name} Excluido com Sucesso");
             return redirect()->route('admin.user.index');

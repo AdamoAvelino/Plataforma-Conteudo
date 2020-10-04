@@ -45,7 +45,7 @@
         <h5 class='border-top mt-2'>{{$modulo->name}}</h5>
       @endif
         @foreach($modulo->permissions as $item)
-          <div class="custom-control custom-switch d-inline">
+          <div class="custom-control custom-switch d-inline-block">
             <input type="checkbox" value='{{$item->id}}' @isset($role)@statusCheck($role->hasPermission($item->id))@endisset name='permission[{{$item->name}}]' class="custom-control-input" id="permission_{{$item->id}}">
             <label class="custom-control-label" for="permission_{{$item->id}}">{{$item->name}}</label> |
           </div>

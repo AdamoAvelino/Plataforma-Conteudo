@@ -42,7 +42,11 @@ class Role extends Model
     public static function all($array = [])
     {
         $autenticado = auth()->user();
-        // dd($autenticado);
+
+        if (! $autenticado->can('view', Role::class)) {
+            return collect([]);
+        }
+
         $produtoras = [];
         $autenticado->produces->map(function ($produtora) use (&$produtoras) {
             $produtoras[] = $produtora->id;
@@ -50,19 +54,18 @@ class Role extends Model
 
         $roles = self::getQuerySelect();
 
-        if ($autenticado->hasManyRules('Coordenador')) {
-            $roles = $roles->whereIn('roles.id', [1,2,3])
+        if ($autenticado->can('viewRoleCoordenador', Role::class)) {
+            $roles = $roles->whereNotIn('roles.id', [4,5])
             ->orWhere(function ($query) use ($produtoras) {
                 $query->whereIn('roles.produce_id', $produtoras);
             });
-        } elseif ($autenticado->hasManyRules('Admin')) {
-            $roles = $roles->whereIn('roles.id', [1,2,3,4])
+        } elseif ($autenticado->can('viewRoleAdmin', Role::class)) {
+            $roles = $roles->whereNotIn('roles.id', [5])
             ->orWhere(function ($query) use ($produtoras) {
                 $query->whereIn('roles.produce_id', $produtoras);
             });
         }
-        // echo $roles->toSql();
-        // dd('para');
+        
         return $roles->get();
     }
 

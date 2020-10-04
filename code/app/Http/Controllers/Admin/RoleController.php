@@ -25,6 +25,10 @@ class RoleController extends Controller
     public function index()
     {
         $roles = Role::all();
+        if (! $roles->count()) {
+            session()->flash('error', 'Acesso Negado');
+            return redirect()->route('admin.sections', 'usuario');
+        }
         return view('admin.role.index', compact('roles'));
     }
 

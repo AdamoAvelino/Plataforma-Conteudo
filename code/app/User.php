@@ -106,6 +106,22 @@ class User extends Authenticatable
         return $this->roles->contains('name', $roles);
     }
 
+    public static function getUser($id)
+    {
+        $autenticado = auth()->user();
+        $user = self::find($id);
+        $view = (
+            $autenticado->can('anyView', $user) or
+            $autenticado->can('viewUserCoordenador', $user) or
+            $autenticado->can('viewUserAdmin', $user) or
+            $autenticado->can('viewUserSelf', $user)
+        );
+        if ($view) {
+            return $user;
+        }
+        return false;
+    }
+
     /**
      * -------------------------------------------------------------------------------------------------------
      * Metodo que retorna uma coleção de objetos usuário de acordo com a permissão do usuário autenticado
@@ -124,7 +140,11 @@ class User extends Authenticatable
         $users = self::getQuerySelect();
 
         // Coordenador pode listar usuarios editores e/ou revesores da própria produtora.
-        if ($autenticado->hasManyRules('Coordenador')) {
+        if ($autenticado->can('anyView', $autenticado)) {
+            $users = $users->groupBy('users.id')->get();
+            return $users;
+        } elseif ($autenticado->can('viewUserCoordenador', $autenticado)) {
+            // dd('coor');
             $users = $users->whereIn('roles.id', [1, 2, 3])
             ->whereIn('user_produce.produce_id', $produtora)
             ->groupBy('users.id')->get();
@@ -132,22 +152,18 @@ class User extends Authenticatable
             return $users;
             
         // Admin pode listar todos os usuários de sua produtora
-        } elseif ($autenticado->hasManyRules('Admin')) {
+        } elseif ($autenticado->can('viewUserAdmin', $autenticado)) {
             $users = $users->whereIn('user_produce.produce_id', $produtora)->groupBy('users.id')->get();
             return $users;
 
         // Revisores e Editodores só podem ver seu perfil
-        } elseif ($autenticado->hasManyRules('Revisor') or $autenticado->hasManyRules('Editor')) {
+        } elseif ($autenticado->can('viewUserSelf', $autenticado)) {
             $users = $users->where('users.id', $autenticado->id)
             ->groupBy('users.id')
             ->get();
 
             return $users;
         }
-
-        // Usuário root pode ver todos os usuários
-        $users = $users->groupBy('users.id')->get();
-        return $users;
     }
 
     /**

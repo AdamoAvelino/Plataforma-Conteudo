@@ -22,7 +22,7 @@
                     </div>
                 </div>
             @endcan
-
+            @can('view', App\Models\Admin\Role::class)
             <div class="col-md-3">
                 <div class="card bg-warning text-white">
                     <div class="card-header text-right">
@@ -42,6 +42,7 @@
                     </div>
                 </div>
             </div>
+            @endcan
             <div class="col-md-3">
                 <div class="card bg-success text-white">
                     <div class="card-header text-right">
